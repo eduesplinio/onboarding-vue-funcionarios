@@ -4,8 +4,7 @@
       © {{ currentYear }} - Orange Dragon | Direitos Reservados
       <v-img
         class="footer-logo"
-        src=""
-        contain
+        src="/favicon.png"
         max-height="100%"
         max-width="100px"
       ></v-img>
@@ -31,12 +30,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: left;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 0;
-  background-color: #000000;
-  color: var(--primary-color);
+  text-align: right;
+  background-color: #F9F9F9;
+  color: var(--secondary-color);
   position: relative;
 }
 
@@ -57,6 +53,6 @@ export default {
 }
 
 .dark-mode .footer-content {
-  background-color: #58595b; /* Cor de fundo para o tema escuro */
+  background-color: #000000;
 }
 </style>

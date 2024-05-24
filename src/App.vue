@@ -10,7 +10,7 @@
 
       <!-- Logo (Visível apenas em desktop) -->
       <router-link to="/" class="d-none d-sm-flex">
-        <v-img src="" class="logo-image" contain :height="150"></v-img>
+        <v-img src="/favicon.png" class="logo-image" contain :height="150"></v-img>
       </router-link>
 
       <!-- Espaçamento para centralizar os itens de navegação -->

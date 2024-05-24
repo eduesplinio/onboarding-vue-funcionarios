@@ -77,10 +77,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('@/assets/login-background.png');
+  background-image: url('');
   background-size: cover;
   background-position: center;
-  background-color: #E2E6E9;
+  background-color: #FFFFFF;
   /* Cor de fundo padrão */
   min-height: 100vh;
   background-repeat: no-repeat;

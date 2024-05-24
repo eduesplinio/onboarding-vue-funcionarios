@@ -1,10 +1,10 @@
 <template>
   <v-footer :class="{'dark-mode': $vuetify.theme.dark}" padless fixed>
     <v-col class="footer-content" cols="12">
-      © {{ currentYear }} - Esplin Software | Direitos Reservados
+      © {{ currentYear }} - Orange Dragon | Direitos Reservados
       <v-img
         class="footer-logo"
-        src="@/assets/logo-branco-footer.svg"
+        src=""
         contain
         max-height="100%"
         max-width="100px"
@@ -35,8 +35,8 @@ export default {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 0;
-  background-color: var(--tertiary-color);
-  color: var(--white-color);
+  background-color: #000000;
+  color: var(--primary-color);
   position: relative;
 }
 
@@ -46,8 +46,8 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px; /* Altura da barra */
-  background-color: var(--primary-color); /* Cor da barra */
+  height: 4px;
+  background-color: var(--secondary-color);
 }
 
 .footer-logo {

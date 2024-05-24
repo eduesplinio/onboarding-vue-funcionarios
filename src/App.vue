@@ -6,18 +6,25 @@
       <v-btn class="d-sm-none" icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
+      
 
       <!-- Logo (Visível apenas em desktop) -->
       <router-link to="/" class="d-none d-sm-flex">
-        <v-img src="@/assets/logo-branco.svg" class="logo-image" contain :height="150"></v-img>
+        <v-img src="" class="logo-image" contain :height="150"></v-img>
       </router-link>
 
       <!-- Espaçamento para centralizar os itens de navegação -->
       <v-spacer></v-spacer>
 
-      <!-- Links de Navegação Centralizados -->
+      <!-- Links de Navegação Centralizados 
       <v-btn class="d-none d-sm-flex menu-button" text to="/clientes">Clientes</v-btn>
       <v-btn class="d-none d-sm-flex menu-button" text to="/produtos">Produtos</v-btn>
+      -->
+
+      <v-btn class="d-none d-sm-flex menu-button" text to="">Primeiros Passos</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="">Agendamentos</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="">Fórum</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="">Feedback</v-btn>
 
       <!-- Espaçamento para alinhar o ícone de ajuda e o logout à direita -->
       <v-spacer></v-spacer>
@@ -50,9 +57,9 @@
         <v-icon left>mdi-logout</v-icon>
         Sair
       </v-btn>
-    </v-app-bar>
+    </v-app-bar>  
 
-    <!-- Drawer para dispositivos móveis -->
+    <!-- Drawer para dispositivos móveis
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list>
         <v-list-item link to="/">Principal</v-list-item>
@@ -60,6 +67,7 @@
         <v-list-item link to="/produtos">Produtos</v-list-item>
       </v-list>
     </v-navigation-drawer>
+     -->
 
     <!-- Conteúdo Principal -->
     <v-main>
@@ -69,9 +77,11 @@
     <!-- Rodapé (Oculto em dispositivos móveis) -->
     <AppFooter v-if="!isMobile" app></AppFooter>
   </v-app>
+  
 </template>
 
 <script>
+
 import { mapActions } from 'vuex';
 import AppFooter from './components/common/AppFooter.vue';
 
@@ -119,7 +129,7 @@ export default {
     },
 
     goToHelpSite() {
-      window.open('https://esplinhubdocs.vercel.app/', '_blank');
+      window.open('#', '_blank');
     },
   },
 

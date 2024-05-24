@@ -5,16 +5,18 @@
 
     <v-row align="center">
       <v-col cols="12" sm="auto" class="d-flex align-items-center">
-        <v-icon large color="#00609c">mdi-home</v-icon>
-        <h2 class="ml-2 mb-0 font-weight-normal primary--text">Principal</h2>
+        <img src="@/assets/icons8-caverna-48.png" alt="Caverna" />
+        <h2 class="ml-1 mt-3 font-weight-normal primary--text">Boas-vindas!</h2>
       </v-col>
     </v-row>
     <v-divider class="my-3" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
 
+    <!--
     <div class="img-container">
       <img v-if="isDesktop" src="@/assets/LiveDesktopWeb.svg" class="img-responsive" />
       <img v-else src="@/assets/LiveDesktopMobile.svg" class="img-responsive" />
     </div>
+    -->
   </v-container>
 </template>
 

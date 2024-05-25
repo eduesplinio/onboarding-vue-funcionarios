@@ -4,9 +4,9 @@
       © {{ currentYear }} - Orange Dragon | Direitos Reservados
       <v-img
         class="footer-logo"
-        src="/favicon.png"
+        src="/logo.svg"
         max-height="100%"
-        max-width="100px"
+        max-width="20px"
       ></v-img>
     </v-col>
   </v-footer>

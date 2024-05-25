@@ -2,7 +2,7 @@
   <div class="login-background">
     <v-container class="fill-height justify-center align-center">
       <v-card class="pa-10 elevation-5" style="padding: 45px; max-width: 360px;" rounded-lg>
-        <img src="" style="width: 270px;">
+        <img src="/logo_nome.svg" style="width: 300px;">
         <v-card-text>
           <v-form ref="form">
             <v-text-field label="E-mail" prepend-icon="mdi-email" type="email" v-model="email" :rules="emailRules"

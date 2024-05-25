@@ -9,7 +9,7 @@
         <h2 class="ml-2 mt-3 font-weight-normal primary--text">Boas-vindas!</h2>
       </v-col>
     </v-row>
-    <v-divider class="my-2" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
+    <v-divider class="my-3" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
 
     <!--
     <div class="img-container">

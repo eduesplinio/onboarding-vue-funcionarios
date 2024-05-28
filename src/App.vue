@@ -21,32 +21,41 @@
       <v-btn class="d-none d-sm-flex menu-button" text to="/produtos">Produtos</v-btn>
       -->
 
-      <v-btn class="d-none d-sm-flex menu-button" text to="">Primeiros Passos</v-btn>
-      <v-btn class="d-none d-sm-flex menu-button" text to="">Agendamentos</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="">Minhas Tarefas</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="">Meus Agendamentos</v-btn>
       <v-btn class="d-none d-sm-flex menu-button" text to="">Fórum</v-btn>
-      <v-btn class="d-none d-sm-flex menu-button" text to="">Feedback</v-btn>
 
       <!-- Espaçamento para alinhar o ícone de ajuda e o logout à direita -->
       <v-spacer></v-spacer>
 
-       <!-- Ícone de modo Claro/Escuro -->
-       <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn text icon v-bind="attrs" v-on="on" @click="darkTheme = !darkTheme">
-            <v-icon>{{ darkTheme ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ darkTheme ? 'Ativar modo claro' : 'Ativar modo escuro' }}</span>
-      </v-tooltip>
-
-      <!-- Ícone de Ajuda -->
-      <v-tooltip bottom>
+            <!-- Ícone de Ajuda -->
+            <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on" @click="goToHelpSite">
             <v-icon>mdi-help-circle-outline</v-icon>
           </v-btn>
         </template>
         <span>Ajuda</span>
+      </v-tooltip>
+      
+         <!-- Ícone de Feedback -->
+         <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-thumb-up-outline</v-icon>
+          </v-btn>
+        </template>
+        <span>Avaliar Empresa</span>
+      </v-tooltip>
+
+       <!-- Ícone de modo Claro/Escuro -->
+       <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn text icon v-bind="attrs" v-on="on" @click="darkTheme = !darkTheme">
+            <v-icon>{{ darkTheme ? 'mdi mdi-white-balance-sunny' : 'mdi-weather-night' }}</v-icon>
+          </v-btn>
+        </template>
+        <span>{{ darkTheme ? 'Ativar modo claro' : 'Ativar modo escuro' }}</span>
       </v-tooltip>
 
       <!-- Botão Sair (Ícone em dispositivos móveis, Texto em desktop) -->

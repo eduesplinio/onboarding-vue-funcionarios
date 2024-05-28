@@ -2,7 +2,7 @@
   <div class="login-background">
     <v-container class="fill-height justify-center align-center">
       <v-card class="pa-10 elevation-5" style="padding: 45px; max-width: 360px;" rounded-lg>
-        <img src="/logo_nome.svg" style="width: 300px;">
+        <img src="" style="width: 300px;">
         <v-card-text>
           <v-form ref="form">
             <v-text-field label="E-mail" prepend-icon="mdi-email" type="email" v-model="email" :rules="emailRules"
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import api from '@/services/api/api.js'; // Assume que 'api' é uma instância configurada do Axios
+// import api from '@/services/api/api.js'; // Assume que 'api' é uma instância configurada do Axios
 
 export default {
   data() {
@@ -43,32 +43,64 @@ export default {
       ]
     };
   },
+  
+  //Autenticação válida com API
+
+  // methods: {
+  //   validateAndLogin() {
+  //     if (this.$refs.form.validate()) {
+  //       this.loginUser();
+  //     }
+  //   },
+  //   loginUser() {
+  //     const credentials = { email: this.email, senha: this.password };
+  //     api.post('/login', credentials)
+  //       .then(response => {
+  //         const token = response.data.token;
+  //         localStorage.setItem('userToken', token);
+  //         this.$router.push('/'); // Redirecionar para a página inicial após o login
+  //       })
+  //       .catch(error => {
+  //         this.errorMessage = '';
+  //         // garantir que a Vue atualize o DOM antes de definir a nova mensagem
+  //         this.$nextTick(() => {
+  //           this.errorMessage = error.response?.data?.message || "Erro na autenticação";
+  //         });
+  //       });
+  //   },
+  //   clearErrorMessage() {
+  //     this.errorMessage = '';
+  //   }
+  // }
+
+// Autenticação fictícia
   methods: {
-    validateAndLogin() {
-      if (this.$refs.form.validate()) {
-        this.loginUser();
-      }
-    },
-    loginUser() {
-      const credentials = { email: this.email, senha: this.password };
-      api.post('/login', credentials)
-        .then(response => {
-          const token = response.data.token;
-          localStorage.setItem('userToken', token);
-          this.$router.push('/'); // Redirecionar para a página inicial após o login
-        })
-        .catch(error => {
-          this.errorMessage = '';
-          // garantir que a Vue atualize o DOM antes de definir a nova mensagem
-          this.$nextTick(() => {
-            this.errorMessage = error.response?.data?.message || "Erro na autenticação";
-          });
-        });
-    },
-    clearErrorMessage() {
-      this.errorMessage = '';
+  validateAndLogin() {
+    if (this.$refs.form.validate()) {
+      this.loginUser();
     }
+  },
+  loginUser() {
+    const credentials = { email: this.email, senha: this.password };
+
+    // Substitua a chamada da API por uma verificação de credenciais estáticas
+    if (credentials.email === 'admin@admin.com' && credentials.senha === '123456') {
+      const token = 'fictitious-token';
+      localStorage.setItem('userToken', token);
+      this.$router.push('/');
+    } else {
+      this.errorMessage = '';
+      this.$nextTick(() => {
+        this.errorMessage = "Erro na autenticação";
+      });
+    }
+  },
+  clearErrorMessage() {
+    this.errorMessage = '';
   }
+}
+ 
+
 }
 </script>
 

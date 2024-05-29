@@ -10,11 +10,12 @@
 
       <!-- Logo (Visível apenas em desktop) -->
       <router-link to="/" class="d-none d-sm-flex">
-        <v-img src="/logo_nome.svg" class="logo-image" contain :height="300"></v-img>
+        <v-img src="/logo.svg" class="logo-image" contain :height="45"></v-img>
       </router-link>
 
       <!-- Espaçamento para centralizar os itens de navegação -->
       <v-spacer></v-spacer>
+      
 
       <!-- Links de Navegação Centralizados 
       <v-btn class="d-none d-sm-flex menu-button" text to="/clientes">Clientes</v-btn>
@@ -150,9 +151,11 @@ export default {
 </script>
 
 <style scoped>
+
 .menu-button {
+  font-family: 'Roboto', sans-serif;
   text-transform: none;
-  font-weight: normal;
+  font-size: 15px;
 }
 
 .logo-image {

@@ -7,17 +7,17 @@ export default new Vuetify({
     theme: {
         themes: {
             light: {
-                primary: '#F75700',
-                secondary: '#FB8104',
-                tertiary: '#d0d2d3',
-                tertiary2: '#929497',
+                primary: '#FF7F00', // Laranja médio
+                secondary: '#FF5500', // Laranja mais escuro
+                tertiary: '#F0EAD6', // Bege claro
+                tertiary2: '#E5E5E5', // Cinza claro
                 white: '#FFFFFF'
             },
             dark: {
-                primary: '#F75700',
-                secondary: '#FB8104',
-                tertiary: '#d0d2d3',
-                tertiary2: '#929497',
+                primary: '#FF7F00', // Laranja médio
+                secondary: '#FF5500', // Laranja mais escuro
+                tertiary: '#F0EAD6', // Bege claro
+                tertiary2: '#E5E5E5', // Cinza claro
             }
         },
     },

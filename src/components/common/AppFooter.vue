@@ -31,7 +31,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   text-align: right;
-  background-color: #F9F9F9;
+  background-color: var(--tertiary-color);
   color: var(--secondary-color);
   position: relative;
 }

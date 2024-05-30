@@ -3,7 +3,7 @@
     <v-container class="fill-height justify-center align-center">
       <v-card class="pa-10 elevation-5" style="padding: 40px; max-width: 350px;" rounded-lg>
         <div class="image-container">
-          <img src="logo_nome.svg" style="width: 250px;">
+          <img src="logo_nome2.svg" style="width: 250px;">
         </div>
         <v-card-text>
           <v-form ref="form">
@@ -12,7 +12,7 @@
             <v-text-field label="Senha" prepend-icon="mdi-lock" type="password" v-model="password" :rules="passwordRules"
               @input="clearErrorMessage" required></v-text-field>
 
-            <div class="mt-10">
+            <div class="mt-5">
               <v-btn @click="validateAndLogin" color="primary" block>Entrar</v-btn>
             </div>
           </v-form>
@@ -123,7 +123,7 @@ export default {
 
 .image-container {
   display: flex;
-  margin: -50px 0 -15px 0;
+  margin: -10px 0 10px;
   justify-content: center;
   align-items: center;
 }

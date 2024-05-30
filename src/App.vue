@@ -9,7 +9,7 @@
       
       <!-- Logo (Visível apenas em desktop) -->
       <router-link to="/" class="d-none d-sm-flex">
-        <v-img src="logo_nome.svg" class="logo-image" contain :height="500"></v-img>
+        <v-img src="logo_nome.svg" class="logo-image"></v-img>
       </router-link>
 
       <!-- Espaçamento para centralizar os botões -->
@@ -152,9 +152,9 @@ export default {
 }
 
 .logo-image {
-  max-height: auto;
-  max-width: 120px;
-  margin-right: 16px;
+  max-height: 300px;
+  max-width: 165px;
+  margin-left: 5px;
 }
 
 .v-app-bar {

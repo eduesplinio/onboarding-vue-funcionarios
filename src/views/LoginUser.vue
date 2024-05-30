@@ -3,7 +3,7 @@
     <v-container class="fill-height justify-center align-center">
       <v-card class="pa-10 elevation-5" style="padding: 40px; max-width: 350px;" rounded-lg>
         <div class="image-container">
-          <img src="logo_nome2.svg" style="width: 250px;">
+          <img src="logo_nome.svg" style="width: 250px;">
         </div>
         <v-card-text>
           <v-form ref="form">

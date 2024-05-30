@@ -1,27 +1,21 @@
 <template>
   <v-app>
     <!-- Barra de Navegação -->
-    <v-app-bar v-if="shouldShowNavBar" app color="primary" dark>
+    <v-app-bar v-if="shouldShowNavBar" app color="#165091" dark class="navbar">
       <!-- Botão Hambúrguer (Visível apenas em dispositivos móveis) -->
       <v-btn class="d-sm-none" icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
       
-
       <!-- Logo (Visível apenas em desktop) -->
       <router-link to="/" class="d-none d-sm-flex">
-        <v-img src="/logo.svg" class="logo-image" contain :height="45"></v-img>
+        <v-img src="logo_nome.svg" class="logo-image" contain :height="500"></v-img>
       </router-link>
 
-      <!-- Espaçamento para centralizar os itens de navegação -->
+      <!-- Espaçamento para centralizar os botões -->
       <v-spacer></v-spacer>
-      
 
-      <!-- Links de Navegação Centralizados 
-      <v-btn class="d-none d-sm-flex menu-button" text to="/clientes">Clientes</v-btn>
-      <v-btn class="d-none d-sm-flex menu-button" text to="/produtos">Produtos</v-btn>
-      -->
-
+      <!-- Links de Navegação -->
       <v-btn class="d-none d-sm-flex menu-button" text to="">Minhas Tarefas</v-btn>
       <v-btn class="d-none d-sm-flex menu-button" text to="">Meus Agendamentos</v-btn>
       <v-btn class="d-none d-sm-flex menu-button" text to="">Fórum</v-btn>
@@ -29,8 +23,8 @@
       <!-- Espaçamento para alinhar o ícone de ajuda e o logout à direita -->
       <v-spacer></v-spacer>
 
-             <!-- Ícone de modo Claro/Escuro -->
-             <v-tooltip bottom>
+      <!-- Ícone de modo Claro/Escuro -->
+      <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn text icon v-bind="attrs" v-on="on" @click="darkTheme = !darkTheme">
             <v-icon>{{ darkTheme ? 'mdi mdi-white-balance-sunny' : 'mdi-weather-night' }}</v-icon>
@@ -153,9 +147,8 @@ export default {
 <style scoped>
 
 .menu-button {
-  font-family: 'Roboto', sans-serif;
   text-transform: none;
-  font-size: 15px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logo-image {

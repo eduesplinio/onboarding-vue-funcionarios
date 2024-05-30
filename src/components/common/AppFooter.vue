@@ -25,14 +25,14 @@ export default {
 
 <style scoped>
 .footer-content {
-  font-size: 12px;
+  font-size: 13px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: right;
-  background-color: var(--tertiary-color);
-  color: var(--secondary-color);
+  background-color: #E5E5E5;
+  color: #165091;
   position: relative;
 }
 
@@ -42,8 +42,8 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background-color: var(--secondary-color);
+  height: 2.2px;
+  background-color: var(--primary-color);
 }
 
 .footer-logo {

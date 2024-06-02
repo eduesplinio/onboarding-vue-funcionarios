@@ -112,7 +112,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('');
+  background-image: url('/public/background.svg');
   background-size: cover;
   background-position: center;
   background-color: #165091;

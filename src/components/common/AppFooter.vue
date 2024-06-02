@@ -32,7 +32,7 @@ export default {
   justify-content: space-between;
   text-align: right;
   background-color: #E5E5E5;
-  color: #165091;
+  color: var(--primary-color);
   position: relative;
 }
 
@@ -43,7 +43,7 @@ export default {
   left: 0;
   right: 0;
   height: 2.2px;
-  background-color: var(--primary-color);
+  background-color:#165091;;
 }
 
 .footer-logo {

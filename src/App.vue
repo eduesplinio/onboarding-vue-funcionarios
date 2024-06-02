@@ -148,7 +148,7 @@ export default {
 
 .menu-button {
   text-transform: none;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15.5px;
 }
 
 .logo-image {

@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    
     <div class="mt-5"></div>
 
     <v-row align="center">
@@ -10,24 +9,26 @@
       </v-col>
     </v-row>
     <v-divider class="my-3" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
-
-    <!--
-    <div class="img-container">
-      <img v-if="isDesktop" src="@/assets/LiveDesktopWeb.svg" class="img-responsive" />
-      <img v-else src="@/assets/LiveDesktopMobile.svg" class="img-responsive" />
+    <div class="media-container">
+      <video v-if="$vuetify.theme.dark" src="@/assets/home-dark.mp4" class="video-responsive no-interaction" autoplay loop muted></video>
+      <video v-else-if="isDesktop" src="@/assets/home-light.mp4" class="video-responsive no-interaction" autoplay loop muted></video>
     </div>
-    -->
   </v-container>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 export default {
   data() {
     return {
       isDesktop: window.innerWidth > 600
     };
+  },
+  computed: {
+    ...mapState({
+      isDarkMode: state => state.isDarkMode
+    })
   },
   created() {
     window.addEventListener('resize', this.checkWidth);
@@ -58,13 +59,18 @@ export default {
 .font-weight-normal {
   font-weight: normal;
 }
-.img-container {
+.media-container {
   text-align: center;
-  margin-top: 30px;
+  width: 100%;
+  height: 110%;
+  justify-content: center;
 }
-.img-responsive {
+.video-responsive, .image-responsive {
   width: 80%;
   height: auto; 
   display: inline-block;
+}
+.no-interaction {
+  pointer-events: none;
 }
 </style>

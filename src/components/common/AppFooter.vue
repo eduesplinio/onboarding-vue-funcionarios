@@ -31,7 +31,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   text-align: right;
-  background-color: #E5E5E5;
+  background-color: #165091;
   color: var(--primary-color);
   position: relative;
 }
@@ -42,8 +42,8 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 2.2px;
-  background-color:#165091;;
+  height: 1.5px;
+  background-color:var(--primary-color);
 }
 
 .footer-logo {

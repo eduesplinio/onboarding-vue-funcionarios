@@ -37,7 +37,7 @@
          <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-thumb-up-outline</v-icon>
+            <v-icon>mdi-bullhorn-outline</v-icon>
           </v-btn>
         </template>
         <span>Avaliar Empresa</span>
@@ -47,10 +47,10 @@
             <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on" @click="goToHelpSite">
-            <v-icon>mdi-help-circle-outline</v-icon>
+            <v-icon>mdi-book-open-variant-outline</v-icon>
           </v-btn>
         </template>
-        <span>Ajuda</span>
+        <span>Recursos e Documentação</span>
       </v-tooltip>
 
       <!-- Botão Sair (Ícone em dispositivos móveis, Texto em desktop) -->
@@ -63,15 +63,15 @@
       </v-btn>
     </v-app-bar>  
 
-    <!-- Drawer para dispositivos móveis
+    <!-- Menu Lateral (Visível apenas em dispositivos móveis) -->
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list>
         <v-list-item link to="/">Principal</v-list-item>
-        <v-list-item link to="/clientes">Clientes</v-list-item>
-        <v-list-item link to="/produtos">Produtos</v-list-item>
+        <v-list-item link to="/">Minhas Tarefas</v-list-item>
+        <v-list-item link to="/">Meus Agendamentos</v-list-item>
+        <v-list-item link to="/">Fórum</v-list-item>
       </v-list>
     </v-navigation-drawer>
-     -->
 
     <!-- Conteúdo Principal -->
     <v-main>
@@ -148,7 +148,7 @@ export default {
 
 .menu-button {
   text-transform: none;
-  font-size: 15.5px;
+  font-size: 14px;
 }
 
 .logo-image {

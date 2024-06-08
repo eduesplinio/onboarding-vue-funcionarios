@@ -122,16 +122,23 @@ export default {
         });
     },
 
-    performLogout() {
-      this.logoutUser()
-        .then(() => {
-          this.$router.push('/login');
-        })
-        .catch(error => {
-          console.error('Erro no logout:', error);
-        });
-    },
+    // performLogout() {
+    //   this.logoutUser()
+    //     .then(() => {
+    //       this.$router.push('/login');
+    //     })
+    //     .catch(error => {
+    //       console.error('Erro no logout:', error);
+    //     });
+    // },
+        performLogout() {
+      // Remove os dados do usuário do localStorage
+      localStorage.removeItem('userToken');
+      localStorage.removeItem('userInfo');
 
+      // Redireciona para a página de login
+      this.$router.push('/login');
+    },
     goToHelpSite() {
       window.open('#', '_blank');
     },

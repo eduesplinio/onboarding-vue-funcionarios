@@ -6,6 +6,9 @@ import ClientTable from '@/components/clients/ClientTable.vue';
 import ClientManager from '@/views/ClientManager.vue';
 import ProductTable from '@/components/products/ProductTable.vue';
 import NotFoundComponents from '@/views/NotFoundComponents.vue';
+import MinhasTarefas from '@/views/MinhasTarefas.vue';
+import MeusAgendamentos from '@/views/MeusAgendamentos.vue';
+import ForumEmpresa from '@/views/ForumEmpresa.vue';
 
 
 Vue.use(Router);
@@ -20,15 +23,33 @@ const router = new Router({
     base: process.env.BASE_URL,
     routes: [
         {
+            path: '/login',
+            name: 'loginUser',
+            component: LoginUser
+        },
+        {
             path: '/',
             name: 'homePage',
             component: HomePage,
             meta: { requiresAuth: true } // Rota protegida
         },
         {
-            path: '/login',
-            name: 'loginUser',
-            component: LoginUser
+            path: '/minhasTarefas',
+            name: 'minhasTarefas',
+            component: MinhasTarefas,
+            meta: { requiresAuth: true } // Rota protegida
+        },
+        {
+            path: '/meusAgendamentos',
+            name: 'meusAgendamentos',
+            component: MeusAgendamentos,
+            meta: { requiresAuth: true } // Rota protegida
+        },
+        {
+            path: '/forumEmpresa',
+            name: 'forumEmpresa',
+            component: ForumEmpresa,
+            meta: { requiresAuth: true } // Rota protegida
         },
         {
             path: '/clientes',

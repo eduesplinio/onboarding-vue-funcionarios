@@ -5,6 +5,7 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
     theme: {
+        dark: true,
         themes: {
             light: {
                 primary: '#FF7F00', // Laranja médio

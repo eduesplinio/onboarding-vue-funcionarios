@@ -16,9 +16,9 @@
       <v-spacer></v-spacer>
 
       <!-- Links de Navegação -->
-      <v-btn class="d-none d-sm-flex menu-button" text to="">Minhas Tarefas</v-btn>
-      <v-btn class="d-none d-sm-flex menu-button" text to="">Meus Agendamentos</v-btn>
-      <v-btn class="d-none d-sm-flex menu-button" text to="">Fórum</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="/minhasTarefas">Minhas Tarefas</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="/meusAgendamentos">Meus Agendamentos</v-btn>
+      <v-btn class="d-none d-sm-flex menu-button" text to="/forumEmpresa">Fórum</v-btn>
 
       <!-- Espaçamento para alinhar o ícone de ajuda e o logout à direita -->
       <v-spacer></v-spacer>
@@ -67,9 +67,9 @@
     <v-navigation-drawer v-model="drawer" app temporary>
       <v-list>
         <v-list-item link to="/">Principal</v-list-item>
-        <v-list-item link to="/">Minhas Tarefas</v-list-item>
-        <v-list-item link to="/">Meus Agendamentos</v-list-item>
-        <v-list-item link to="/">Fórum</v-list-item>
+        <v-list-item link to="/minhasTarefas">Minhas Tarefas</v-list-item>
+        <v-list-item link to="/meusAgendamentos">Meus Agendamentos</v-list-item>
+        <v-list-item link to="/forumEmpresa">Fórum</v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -93,7 +93,7 @@ export default {
   data() {
     return {
       drawer: false,
-      darkTheme: false
+      darkTheme: true
     };
   },
   computed: {

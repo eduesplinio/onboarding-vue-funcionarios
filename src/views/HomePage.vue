@@ -9,10 +9,10 @@
       </v-col>
     </v-row>
     <v-divider class="my-3" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
-    <!-- <div class="media-container">
+    <div class="media-container">
       <video v-if="$vuetify.theme.dark" src="@/assets/home-dark.mp4" class="video-responsive no-interaction" autoplay loop muted></video>
       <video v-else-if="isDesktop" src="@/assets/home-light.mp4" class="video-responsive no-interaction" autoplay loop muted></video>
-    </div> -->
+    </div>
   </v-container>
 </template>
 

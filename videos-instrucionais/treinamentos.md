@@ -7,3 +7,12 @@ description: >-
 
 # 🎓 Treinamentos
 
+{% embed url="https://sebrae.com.br/sites/PortalSebrae/cursosonline/comunicacao-e-relacionamento-com-seus-clientes,dcd0b8a6a28bb610VgnVCM1000004c00210aRCRD" %}
+
+{% embed url="https://sebrae.com.br/sites/PortalSebrae/cursosonline/qualidade-no-atendimento-ao-cliente,b680b8a6a28bb610VgnVCM1000004c00210aRCRD" fullWidth="false" %}
+
+{% embed url="https://sebrae.com.br/sites/PortalSebrae/cursosonline/atendimento-ao-cliente,fe80b8a6a28bb610VgnVCM1000004c00210aRCRD" %}
+
+{% embed url="https://www.coursera.org/" %}
+
+{% embed url="https://www.ev.org.br/areas-de-interesse/tecnologia-da-informacao" %}

@@ -140,7 +140,7 @@ export default {
       this.$router.push('/login');
     },
     goToHelpSite() {
-      window.open('#', '_blank');
+      window.open('https://unifeso.gitbook.io/orange-dragon', '_blank');
     },
   },
 

@@ -7,7 +7,7 @@ description: >-
 
 # 📜 Políticas da Empresa
 
-### <mark style="color:orange;">**1. Política de Conduta no Trabalho**</mark>
+### **1. Política de Conduta no Trabalho**
 
 <mark style="color:blue;">**Objetivo:**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Estabelecer normas de comportamento esperadas de todos os funcionários para promover um ambiente de trabalho harmonioso e produtivo.</mark>
 
@@ -16,7 +16,7 @@ description: >-
 * <mark style="color:orange;">**Pontualidade e Assiduidade**</mark>**:** Espera-se que todos os funcionários sejam pontuais e mantenham uma frequência regular no trabalho.
 * <mark style="color:orange;">**Comunicação**</mark>**:** A comunicação deve ser clara, respeitosa e construtiva. Conflitos devem ser resolvidos de maneira profissional e com a mediação do RH, se necessário.
 
-### <mark style="color:orange;">**2. Política de Uso de Recursos da Empresa**</mark>
+### **2. Política de Uso de Recursos da Empresa**
 
 <mark style="color:blue;">**Objetivo:**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Garantir o uso apropriado e responsável dos recursos da empresa para promover a eficiência e a integridade.</mark>
 
@@ -24,7 +24,7 @@ description: >-
 * <mark style="color:orange;">**Tecnologia e Internet**</mark>**:** O uso da internet e de e-mails da empresa deve ser restrito a atividades relacionadas ao trabalho. Uso pessoal excessivo ou inadequado pode resultar em medidas disciplinares.
 * <mark style="color:orange;">**Segurança da Informação**</mark>**:** Todos os funcionários devem seguir as diretrizes de segurança da informação, incluindo a proteção de senhas e a não divulgação de informações confidenciais.
 
-### <mark style="color:orange;">**3. Política de Desenvolvimento Profissional**</mark>
+### **3. Política de Desenvolvimento Profissional**
 
 <mark style="color:blue;">**Objetivo:**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Promover o desenvolvimento contínuo dos funcionários para melhorar suas habilidades e contribuir para o crescimento da empresa.</mark>
 
@@ -32,7 +32,7 @@ description: >-
 * <mark style="color:orange;">**Planos de Carreira**</mark>**:** São desenvolvidos planos de carreira individualizados para ajudar os funcionários a alcançar seus objetivos profissionais dentro da empresa.
 * <mark style="color:orange;">**Avaliações de Desempenho**</mark>**:** Avaliações de desempenho regulares são conduzidas para fornecer feedback construtivo e identificar oportunidades de crescimento.
 
-### <mark style="color:orange;">**4. Política de Saúde e Segurança**</mark>
+### **4. Política de Saúde e Segurança**
 
 <mark style="color:blue;">**Objetivo:**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Assegurar um ambiente de trabalho seguro e saudável para todos os funcionários.</mark>
 
@@ -40,7 +40,7 @@ description: >-
 * <mark style="color:orange;">**Equipamentos de Proteção**</mark>**:** Onde necessário, a empresa fornecerá equipamentos de proteção individual (EPIs) e treinamento para seu uso adequado.
 * <mark style="color:orange;">**Reportar Incidentes**</mark>**:** Todos os incidentes, acidentes ou riscos à segurança devem ser reportados imediatamente ao departamento de saúde e segurança para investigação e ação corretiva.
 
-### <mark style="color:orange;">**5. Política de Conformidade e Ética**</mark>
+### **5. Política de Conformidade e Ética**
 
 <mark style="color:blue;">**Objetivo:**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Manter altos padrões de integridade e conformidade com todas as leis e regulamentações aplicáveis.</mark>
 
@@ -48,7 +48,7 @@ description: >-
 * <mark style="color:orange;">**Conduta Ética**</mark>**:** A conduta ética é esperada de todos os funcionários em todas as suas atividades profissionais.
 * **Reportar Violações:** Violações de conformidade ou conduta ética devem ser reportadas anonimamente através da linha direta de ética da empresa.
 
-### <mark style="color:orange;">**6. Política de Diversidade e Inclusão**</mark>
+### **6. Política de Diversidade e Inclusão**
 
 <mark style="color:blue;">**Objetivo:**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Promover um ambiente de trabalho diversificado e inclusivo onde todos os funcionários se sintam valorizados e respeitados.</mark>
 
@@ -57,9 +57,9 @@ description: >-
 * <mark style="color:orange;">**Ambiente Inclusivo**</mark>**:** Esforçamo-nos para criar um ambiente onde todos os funcionários possam trazer seu verdadeiro eu para o trabalho e contribuir plenamente para o sucesso da empresa.
 
 {% hint style="success" %}
-<mark style="color:green;">Essas políticas são fundamentais para o funcionamento harmonioso e eficiente da Orange Dragon e para o bem-estar de todos os funcionários.</mark>&#x20;
+Essas políticas são fundamentais para o funcionamento harmonioso e eficiente da Orange Dragon e para o bem-estar de todos os funcionários.&#x20;
 
-<mark style="color:green;">A adesão a essas políticas é obrigatória e o não cumprimento pode resultar em medidas disciplinares, incluindo rescisão de contrato.</mark>&#x20;
+A adesão a essas políticas é obrigatória e o não cumprimento pode resultar em medidas disciplinares, incluindo rescisão de contrato.&#x20;
 
-<mark style="color:green;">Para qualquer dúvida ou esclarecimento, entre em contato com o departamento de Recursos Humanos.</mark>
+Para qualquer dúvida ou esclarecimento, entre em contato com o departamento de Recursos Humanos.
 {% endhint %}

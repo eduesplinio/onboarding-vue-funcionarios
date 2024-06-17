@@ -1,6 +1,6 @@
 # Table of contents
 
-* [📚 Orange Dragon Doc](README.md)
+* [📚 Orange Dragon Docs](README.md)
 * [📖 Guias de Procedimento](guias-de-procedimento.md)
 * [📹 Vídeos Instrucionais](videos-instrucionais/README.md)
   * [🎓 Treinamentos](videos-instrucionais/treinamentos.md)

@@ -16,7 +16,7 @@
         <v-list dense>
           <v-list-item v-for="(tarefa, index) in tarefas" :key="index" @click="toggleTarefa(index)">
             <v-list-item-icon>
-              <v-icon :color="tarefa.concluida ? 'green' : 'grey'">{{ tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline' }}</v-icon>
+              <v-icon :color="tarefa.concluida ? 'blue' : 'blue'">{{ tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline' }}</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title :class="{ 'text--strikethrough': tarefa.concluida }">{{ tarefa.descricao }}</v-list-item-title>

@@ -104,7 +104,6 @@ export default {
           { descricao: 'Atualizar planilhas de controle', horario: '05/07/2024 14:00', concluida: false, link: 'https://docs.google.com/spreadsheets', textoLink: 'Google Planilhas' },
           { descricao: 'Enviar relatório de atividades', horario: '06/07/2024 14:00', concluida: false },
           { descricao: 'Organizar arquivos digitais', horario: '07/07/2024 09:00', concluida: false },
-          { descricao: 'Revisar documentos para envio', horario: '07/07/2024 11:00', concluida: false },
           { descricao: 'Agendar compromissos da semana', horario: '09/07/2024 09:00', concluida: false, link: 'https://calendar.google.com/calendar', textoLink: 'Google Agenda' },
           { descricao: 'Participar de treinamento online', horario: '11/07/2024 16:00', concluida: false, link: 'https://sebrae.com.br/sites/PortalSebrae/cursosonline/qualidade-no-atendimento-ao-cliente,b680b8a6a28bb610VgnVCM1000004c00210aRCRD', textoLink: 'Sebrae - Qualidade no atendimento ao cliente' },
         ];

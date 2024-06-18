@@ -18,8 +18,8 @@
             <v-list-item-icon>
               <v-icon :color="tarefa.concluida ? 'blue' : 'blue'">{{ tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline' }}</v-icon>
             </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title :class="{ 'text--strikethrough': tarefa.concluida }">{{ tarefa.descricao }}</v-list-item-title>
+            <v-list-item-content :class="{ 'text--strikethrough': tarefa.concluida }">
+              <v-list-item-title>{{ tarefa.descricao }}</v-list-item-title>
               <v-list-item-subtitle>{{ tarefa.horario }}</v-list-item-subtitle>
               <v-list-item-subtitle v-if="tarefa.link">
                 <a :href="tarefa.link" target="_blank" @click.stop>{{ tarefa.textoLink }}</a>
@@ -99,7 +99,7 @@ export default {
         // Se não houver tarefas salvas, inicialize com um array vazio ou valores padrão
         this.tarefas = [
           { descricao: 'Ler Documentação da Empresa', horario: '05/07/2024 09:00', concluida: false, link: 'https://unifeso.gitbook.io/orange-dragon', textoLink: 'Documentação Origin Dragon' },
-          { descricao: 'Preparar apresentação para reunião', horario: '05/07/2024 10:00', concluida: false, link: 'https://www.canva.com/', textoLink: 'Canva'},
+          { descricao: 'Preparar apresentação para reunião', horario: '05/07/2024 10:00', concluida: false, link: 'https://www.canva.com/', textoLink: 'Canva' },
           { descricao: 'Participar de reunião de equipe', horario: '06/07/2024 11:00', concluida: false, link: 'https://meet.google.com/new?authuser=0&hs=178', textoLink: 'Reunião de Equipe' },
           { descricao: 'Atualizar planilhas de controle', horario: '06/07/2024 14:00', concluida: false, link: 'https://docs.google.com/spreadsheets', textoLink: 'Google Planilhas' },
           { descricao: 'Enviar relatório de atividades', horario: '06/07/2024 15:00', concluida: false },

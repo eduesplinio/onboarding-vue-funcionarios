@@ -21,6 +21,9 @@
             <v-list-item-content>
               <v-list-item-title :class="{ 'text--strikethrough': tarefa.concluida }">{{ tarefa.descricao }}</v-list-item-title>
               <v-list-item-subtitle>{{ tarefa.horario }}</v-list-item-subtitle>
+              <v-list-item-subtitle v-if="tarefa.link">
+                <a :href="tarefa.link" target="_blank" @click.stop>{{ tarefa.textoLink }}</a>
+              </v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -95,15 +98,15 @@ export default {
       } else {
         // Se não houver tarefas salvas, inicialize com um array vazio ou valores padrão
         this.tarefas = [
-           { descricao: 'Responder e-mails', horario: '05/04/2023 09:00', concluida: false },
-        { descricao: 'Preparar apresentação para reunião', horario: '05/04/2023 11:00', concluida: false },
-        { descricao: 'Atualizar planilhas de controle', horario: '05/04/2023 14:00', concluida: false },
-        { descricao: 'Participar de reunião de equipe', horario: '06/04/2023 10:00', concluida: false },
-        { descricao: 'Organizar arquivos digitais', horario: '07/04/2023 09:00', concluida: false },
-        { descricao: 'Revisar documentos para envio', horario: '08/04/2023 11:00', concluida: false },
-        { descricao: 'Agendar compromissos da semana', horario: '09/04/2023 09:00', concluida: false },
-        { descricao: 'Realizar follow-up de tarefas pendentes', horario: '10/04/2023 14:00', concluida: false },
-        { descricao: 'Participar de treinamento online', horario: '11/04/2023 16:00', concluida: false },
+          { descricao: 'Ler Documentação da Empresa', horario: '05/07/2024 09:00', concluida: false, link: 'https://unifeso.gitbook.io/orange-dragon', textoLink: 'Documentação Origin Dragon' },
+          { descricao: 'Preparar apresentação para reunião', horario: '05/07/2024 10:00', concluida: false, link: 'https://www.canva.com/', textoLink: 'Canva'},
+          { descricao: 'Participar de reunião de equipe', horario: '06/07/2024 11:00', concluida: false, link: 'https://meet.google.com/new?authuser=0&hs=178', textoLink: 'Reunião de Equipe' },
+          { descricao: 'Atualizar planilhas de controle', horario: '05/07/2024 14:00', concluida: false, link: 'https://docs.google.com/spreadsheets', textoLink: 'Google Planilhas' },
+          { descricao: 'Enviar relatório de atividades', horario: '06/07/2024 14:00', concluida: false },
+          { descricao: 'Organizar arquivos digitais', horario: '07/07/2024 09:00', concluida: false },
+          { descricao: 'Revisar documentos para envio', horario: '07/07/2024 11:00', concluida: false },
+          { descricao: 'Agendar compromissos da semana', horario: '09/07/2024 09:00', concluida: false, link: 'https://calendar.google.com/calendar', textoLink: 'Google Agenda' },
+          { descricao: 'Participar de treinamento online', horario: '11/07/2024 16:00', concluida: false, link: 'https://sebrae.com.br/sites/PortalSebrae/cursosonline/qualidade-no-atendimento-ao-cliente,b680b8a6a28bb610VgnVCM1000004c00210aRCRD', textoLink: 'Sebrae - Qualidade no atendimento ao cliente' },
         ];
       }
     },

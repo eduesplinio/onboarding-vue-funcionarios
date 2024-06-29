@@ -9,6 +9,7 @@ import NotFoundComponents from '@/views/NotFoundComponents.vue';
 import MinhasTarefas from '@/views/MinhasTarefas.vue';
 import MeusAgendamentos from '@/views/MeusAgendamentos.vue';
 import ForumEmpresa from '@/views/ForumEmpresa.vue';
+import FeedbackEmpresa from '@/views/FeedbackEmpresa.vue';
 
 
 Vue.use(Router);
@@ -43,6 +44,12 @@ const router = new Router({
             path: '/meusAgendamentos',
             name: 'meusAgendamentos',
             component: MeusAgendamentos,
+            meta: { requiresAuth: true } // Rota protegida
+        },
+        {
+            path: '/feedbackEmpresa',
+            name: 'FeedbackEmpresa',
+            component: FeedbackEmpresa,
             meta: { requiresAuth: true } // Rota protegida
         },
         {

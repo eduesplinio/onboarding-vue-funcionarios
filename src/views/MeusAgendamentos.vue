@@ -4,50 +4,57 @@
 
     <v-row align="center">
       <v-col cols="12" sm="auto" class="d-flex align-items-center">
-        <v-icon color="secondary" class="mt-20" size="40">mdi-calendar-today</v-icon>
-        <h2 class="ml-2 mt-3 font-weight-normal primary--text">Meus Agendamentos</h2>
+        <v-icon color="secondary" class="mt-20" size="40"
+          >mdi-calendar-today</v-icon
+        >
+        <h2 class="ml-2 mt-3 font-weight-normal primary--text">
+          Meus Agendamentos
+        </h2>
       </v-col>
     </v-row>
-    <v-divider class="my-3" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
+    <v-divider
+      class="my-3"
+      :style="{ backgroundColor: 'tertiary' }"
+    ></v-divider>
   </v-container>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapState } from "vuex";
 
 export default {
   data() {
     return {
-      isDesktop: window.innerWidth > 600
+      isDesktop: window.innerWidth > 600,
     };
   },
   computed: {
     ...mapState({
-      isDarkMode: state => state.isDarkMode
-    })
+      isDarkMode: (state) => state.isDarkMode,
+    }),
   },
   created() {
-    window.addEventListener('resize', this.checkWidth);
+    window.addEventListener("resize", this.checkWidth);
   },
   destroyed() {
-    window.removeEventListener('resize', this.checkWidth);
+    window.removeEventListener("resize", this.checkWidth);
   },
   methods: {
-    ...mapActions(['logoutUser']),
+    ...mapActions(["logoutUser"]),
 
     performLogout() {
       this.logoutUser()
         .then(() => {
-          this.$router.push('/login');
+          this.$router.push("/login");
         })
-        .catch(error => {
-          console.error('Erro no logout:', error);
+        .catch((error) => {
+          console.error("Erro no logout:", error);
         });
     },
     checkWidth() {
       this.isDesktop = window.innerWidth > 600;
-    }
-  }
+    },
+  },
 };
 </script>
 

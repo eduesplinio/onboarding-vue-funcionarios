@@ -20,7 +20,7 @@
         >Minhas Tarefas</v-btn
       >
       <v-btn class="d-none d-sm-flex menu-button" text to="/meusAgendamentos"
-        >Meus Agendamentos</v-btn
+        >Agendar Eventos</v-btn
       >
       <v-btn class="d-none d-sm-flex menu-button" text to="/forumEmpresa"
         >Fórum</v-btn
@@ -99,7 +99,7 @@
       <v-card>
         <v-form ref="form" v-model="valid" lazy-validation>
           <v-card-title>
-            <span class="headline">Deixe seu Feedback</span>
+            <span class="headline">Deixe seu Feedback sobre a Empresa!</span>
           </v-card-title>
           <v-card-text>
             <v-text-field

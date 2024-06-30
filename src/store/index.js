@@ -9,8 +9,8 @@ export default new Vuex.Store({
     state: {
         user: null,
         token: null,
-        clientes: [],
-        produtos: [],
+        tarefas: [],
+        eventos: [],
     },
     mutations,
     actions,

@@ -7,10 +7,6 @@ export default {
         commit('SET_USER', user);
     },
 
-    adicionarTarefa({ commit }, novaTarefa) {
-        commit('ADICIONAR_TAREFA', novaTarefa);
-    },
-
     logoutUser({ commit }) {
         localStorage.removeItem('userToken');
         commit('CLEAR_USER_DATA');
@@ -18,5 +14,16 @@ export default {
 
     criarEvento({ commit }, eventoData) {
         commit('ADICIONAR_EVENTO', eventoData);
-    }
+    },
+    carregarTarefas({ commit }) {
+        const tarefasSalvas = localStorage.getItem('tarefas');
+        if (tarefasSalvas) {
+            commit('SET_TAREFAS', JSON.parse(tarefasSalvas));
+        }
+    },
+    adicionarTarefa({ commit, state }, novaTarefa) {
+        const tarefasAtualizadas = [...state.tarefas, novaTarefa];
+        localStorage.setItem('tarefas', JSON.stringify(tarefasAtualizadas));
+        commit('ADICIONAR_TAREFA', novaTarefa);
+    },
 }

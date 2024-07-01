@@ -2,7 +2,6 @@
   <v-container>
     <div class="mt-5"></div>
 
-    <!-- Título -->
     <v-row align="center">
       <v-col cols="12" sm="auto" class="d-flex align-items-center">
         <v-icon color="secondary" class="mt-20" size="40"
@@ -19,19 +18,17 @@
       :style="{ backgroundColor: 'tertiary' }"
     ></v-divider>
 
-    <!-- Formulário para adicionar Evento -->
     <v-form ref="form" v-model="valid" lazy-validation>
-      <!-- Título e Descrição -->
       <v-text-field
         prepend-icon="mdi-rename-outline"
         v-model="titulo"
-        label="Título do Evento"
+        label="Nome do Evento"
         :rules="[rules.required]"
       ></v-text-field>
       <v-textarea
         prepend-icon="mdi-subtitles-outline"
         v-model="descricao"
-        label="Descrição do Evento"
+        label="Descrição"
         :rules="[rules.required]"
       ></v-textarea>
 
@@ -39,25 +36,13 @@
         <v-col cols="12" md="6">
           <v-text-field
             v-model="linkVideo"
-            label="Link do Evento"
+            label="Link"
             prepend-icon="mdi-link-variant"
             :rules="[rules.optionalUrl]"
           ></v-text-field>
         </v-col>
-
-        <v-col cols="12" md="6">
-          <v-file-input
-            v-model="pdfs"
-            label="Anexar Arquivo (opcional)"
-            prepend-icon="mdi-file-document-outline"
-            multiple
-            accept="*/*"
-            @change="onFileChange"
-          ></v-file-input>
-        </v-col>
       </v-row>
 
-      <!-- Data da Reunião/Treinamento -->
       <v-row>
         <v-col cols="12" sm="3">
           <v-menu
@@ -70,7 +55,7 @@
             <template v-slot:activator="{ attrs }">
               <v-text-field
                 v-model="dataReuniaoFormatted"
-                label="Data do Evento"
+                label="Data"
                 prepend-icon="mdi-calendar"
                 readonly
                 v-bind="attrs"
@@ -87,7 +72,6 @@
           </v-menu>
         </v-col>
 
-        <!-- Hora da Reunião/Treinamento -->
         <v-col cols="12" sm="3">
           <v-menu
             v-model="showTimePicker"
@@ -99,7 +83,7 @@
             <template v-slot:activator="{ attrs }">
               <v-text-field
                 v-model="horaReuniao"
-                label="Hora do Evento"
+                label="Hora"
                 prepend-icon="mdi-clock-time-four-outline"
                 readonly
                 v-bind="attrs"
@@ -114,13 +98,19 @@
           </v-menu>
         </v-col>
 
-        <!-- Espaço vazio -->
         <v-col cols="12" sm="3"></v-col>
       </v-row>
 
-      <!-- Botão de Submissão -->
       <v-btn color="primary" @click="submitEvento">Agendar</v-btn>
     </v-form>
+
+    <!-- Snackbar -->
+    <v-snackbar v-model="snackbar" :timeout="3000" color="green">
+      Evento adicionado em
+      <v-btn class="snackbar-link" text @click="navigateToMinhasTarefas"
+        >Minhas Tarefas</v-btn
+      >
+    </v-snackbar>
   </v-container>
 </template>
 
@@ -132,10 +122,9 @@ export default {
     return {
       titulo: "",
       descricao: "",
-      dataReuniao: null,
-      horaReuniao: null,
+      dataReuniao: "",
+      horaReuniao: "",
       linkVideo: "",
-      pdfs: [],
       valid: false,
       rules: {
         required: (value) => !!value || "Campo obrigatório",
@@ -148,6 +137,7 @@ export default {
       },
       showDatePicker: false,
       showTimePicker: false,
+      snackbar: false,
     };
   },
   computed: {
@@ -167,7 +157,6 @@ export default {
           dataReuniao: this.dataReuniao,
           horaReuniao: this.horaReuniao,
           linkVideo: this.linkVideo,
-          pdfs: this.pdfs,
         };
         console.log("Form Data:", formData);
         this.criarEvento(formData)
@@ -180,8 +169,8 @@ export default {
               horaReuniao: formData.horaReuniao,
               concluida: false,
               link: formData.linkVideo,
-              pdf: formData.pdfs.length > 0 ? formData.pdfs[0] : null,
             });
+            this.snackbar = true; // Show the snackbar
             this.resetForm();
           })
           .catch((error) => {
@@ -191,20 +180,19 @@ export default {
         console.log("Formulário inválido");
       }
     },
+    navigateToMinhasTarefas() {
+      this.$router.push({ name: "minhasTarefas" });
+    },
     resetForm() {
       this.titulo = "";
       this.descricao = "";
       this.dataReuniao = null;
       this.horaReuniao = null;
       this.linkVideo = "";
-      this.pdfs = [];
       this.valid = false;
       this.showDatePicker = false;
       this.showTimePicker = false;
       this.$refs.form.resetValidation();
-    },
-    onFileChange(files) {
-      console.log("Arquivos selecionados:", files);
     },
   },
 };
@@ -217,5 +205,9 @@ export default {
 
 .text--strikethrough {
   text-decoration: line-through;
+}
+.snackbar-link {
+  text-decoration: underline;
+  text-transform: capitalize;
 }
 </style>

@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 export default {
     SET_TOKEN(state, token) {
         state.token = token;
@@ -12,7 +14,10 @@ export default {
     ADICIONAR_TAREFA(state, novaTarefa) {
         state.tarefas.push(novaTarefa);
     },
+    setTarefas(state, tarefas) {
+        Vue.set(state, 'tarefas', tarefas);
+    },
     ADICIONAR_EVENTO(state, novoEvento) {
         state.eventos.push(novoEvento);
-    }
+    },
 }

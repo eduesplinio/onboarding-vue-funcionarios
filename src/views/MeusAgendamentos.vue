@@ -9,7 +9,7 @@
           >mdi-calendar-today</v-icon
         >
         <h2 class="ml-2 mt-3 font-weight-normal primary--text">
-          Agendar Reunião/Treinamento
+          Agendar Evento
         </h2>
       </v-col>
     </v-row>
@@ -23,19 +23,43 @@
     <v-form ref="form" v-model="valid" lazy-validation>
       <!-- Título e Descrição -->
       <v-text-field
+        prepend-icon="mdi-rename-outline"
         v-model="titulo"
         label="Título do Evento"
         :rules="[rules.required]"
       ></v-text-field>
       <v-textarea
+        prepend-icon="mdi-subtitles-outline"
         v-model="descricao"
         label="Descrição do Evento"
         :rules="[rules.required]"
       ></v-textarea>
 
+      <v-row>
+        <v-col cols="12" md="6">
+          <v-text-field
+            v-model="linkVideo"
+            label="Link do Evento"
+            prepend-icon="mdi-link-variant"
+            :rules="[rules.optionalUrl]"
+          ></v-text-field>
+        </v-col>
+
+        <v-col cols="12" md="6">
+          <v-file-input
+            v-model="pdfs"
+            label="Anexar Arquivo (opcional)"
+            prepend-icon="mdi-file-document-outline"
+            multiple
+            accept="*/*"
+            @change="onFileChange"
+          ></v-file-input>
+        </v-col>
+      </v-row>
+
       <!-- Data da Reunião/Treinamento -->
       <v-row>
-        <v-col cols="12" sm="6">
+        <v-col cols="12" sm="3">
           <v-menu
             v-model="showDatePicker"
             :close-on-content-click="false"
@@ -43,13 +67,14 @@
             transition="scale-transition"
             offset-y
           >
-            <template v-slot:activator="{ on }">
+            <template v-slot:activator="{ attrs }">
               <v-text-field
                 v-model="dataReuniaoFormatted"
-                label="Data da Reunião/Treinamento"
+                label="Data do Evento"
                 prepend-icon="mdi-calendar"
                 readonly
-                v-on="on"
+                v-bind="attrs"
+                @click="showDatePicker = true"
               ></v-text-field>
             </template>
             <v-date-picker
@@ -63,7 +88,7 @@
         </v-col>
 
         <!-- Hora da Reunião/Treinamento -->
-        <v-col cols="12" sm="6">
+        <v-col cols="12" sm="3">
           <v-menu
             v-model="showTimePicker"
             :close-on-content-click="false"
@@ -71,13 +96,14 @@
             transition="scale-transition"
             offset-y
           >
-            <template v-slot:activator="{ on }">
+            <template v-slot:activator="{ attrs }">
               <v-text-field
                 v-model="horaReuniao"
-                label="Hora da Reunião/Treinamento"
+                label="Hora do Evento"
                 prepend-icon="mdi-clock-time-four-outline"
                 readonly
-                v-on="on"
+                v-bind="attrs"
+                @click="showTimePicker = true"
               ></v-text-field>
             </template>
             <v-time-picker
@@ -87,35 +113,13 @@
             ></v-time-picker>
           </v-menu>
         </v-col>
-      </v-row>
 
-      <!-- Campos separados para Link e PDFs -->
-      <v-row>
-        <!-- Campo para Link do Evento -->
-        <v-col cols="12" sm="6">
-          <v-text-field
-            v-model="linkVideo"
-            label="Link do Evento"
-            prepend-icon="mdi-link-variant"
-            :rules="[rules.optionalUrl]"
-          ></v-text-field>
-        </v-col>
-
-        <!-- Campo para Anexar PDFs -->
-        <v-col cols="12" sm="6">
-          <v-file-input
-            v-model="pdfs"
-            label="Anexar Arquivo (opcional)"
-            prepend-icon="mdi-file-document-outline"
-            multiple
-            accept="*/*"
-            @change="onFileChange"
-          ></v-file-input>
-        </v-col>
+        <!-- Espaço vazio -->
+        <v-col cols="12" sm="3"></v-col>
       </v-row>
 
       <!-- Botão de Submissão -->
-      <v-btn color="primary" @click="submitEvento">Agendar Evento</v-btn>
+      <v-btn color="primary" @click="submitEvento">Agendar</v-btn>
     </v-form>
   </v-container>
 </template>

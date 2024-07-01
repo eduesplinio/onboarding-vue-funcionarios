@@ -1,5 +1,5 @@
 <template>
-  <v-footer :class="{'dark-mode': $vuetify.theme.dark}" padless fixed>
+  <v-footer :class="{ 'dark-mode': $vuetify.theme.dark }" padless fixed>
     <v-col class="footer-content" cols="12">
       © {{ currentYear }} - Orange Dragon | Direitos Reservados
       <v-img
@@ -14,12 +14,12 @@
 
 <script>
 export default {
-  name: 'FooterComponent',
+  name: "FooterComponent",
   computed: {
     currentYear() {
       return new Date().getFullYear();
     },
-  }
+  },
 };
 </script>
 
@@ -31,19 +31,19 @@ export default {
   align-items: center;
   justify-content: space-between;
   text-align: right;
-  background-color: #165091;
+  background-color: #002147;
   color: var(--primary-color);
   position: relative;
 }
 
 .footer-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1.5px;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .footer-logo {
@@ -53,6 +53,6 @@ export default {
 }
 
 .dark-mode .footer-content {
-  background-color: #000000;
+  background-color: 002147;
 }
 </style>

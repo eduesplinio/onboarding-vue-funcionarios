@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- Barra de Navegação -->
-    <v-app-bar v-if="shouldShowNavBar" app color="#165091" dark class="navbar">
+    <v-app-bar v-if="shouldShowNavBar" app color="#002147" dark class="navbar">
       <!-- Botão Hambúrguer (Visível apenas em dispositivos móveis) -->
       <v-btn class="d-sm-none" icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>

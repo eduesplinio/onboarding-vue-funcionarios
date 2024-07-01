@@ -104,11 +104,13 @@
           <v-card-text>
             <v-text-field
               v-model="titulo"
+              prepend-icon="mdi-rename-outline"
               label="Título do Feedback"
               :rules="[rules.required]"
             ></v-text-field>
             <v-textarea
               v-model="conteudo"
+              prepend-icon="mdi-subtitles-outline"
               label="Conteúdo do Feedback"
               :rules="[rules.required]"
             ></v-textarea>
@@ -241,5 +243,9 @@ export default {
 
 .v-app-bar > *:not(.v-img):not(.v-btn) {
   flex: 1 1 auto;
+}
+
+.centered-snackbar {
+  align-items: center;
 }
 </style>

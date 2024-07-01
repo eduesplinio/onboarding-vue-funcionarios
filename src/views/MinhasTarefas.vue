@@ -53,10 +53,10 @@
               </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-icon color="green" @click.stop="editarTarefa(index)"
+              <v-icon color="primary" @click.stop="editarTarefa(index)"
                 >mdi-pencil</v-icon
               >
-              <v-icon color="red" @click.stop="confirmarExclusao(index)"
+              <v-icon color="primary" @click.stop="confirmarExclusao(index)"
                 >mdi-delete</v-icon
               >
             </v-list-item-action>

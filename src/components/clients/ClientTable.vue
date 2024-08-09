@@ -2,7 +2,6 @@
   <v-row justify="center">
     <v-col cols="12" md="10" lg="12">
       <v-container>
-
         <!-- Espaçamento no topo -->
         <div class="mt-5"></div>
 
@@ -15,17 +14,30 @@
         </v-row>
 
         <!-- Linha horizontal personalizada -->
-        <v-divider class="my-3" :style="{ 'backgroundColor': 'tertiary' }"></v-divider>
+        <v-divider
+          class="my-3"
+          :style="{ backgroundColor: 'tertiary' }"
+        ></v-divider>
 
         <!-- Botão de Novo Cliente -->
-        <v-btn class="action-button mb-7 mt-5" color="primary" @click="openNewClientDialog">
+        <v-btn
+          class="action-button mb-7 mt-5"
+          color="primary"
+          @click="openNewClientDialog"
+        >
           Novo Cliente
         </v-btn>
         <client-manager ref="clientManager"></client-manager>
 
         <!-- Tabela de Clientes -->
-        <v-data-table :headers="headers" :items="clientes" :loading="loading" class="elevation-1" mobile-breakpoint="500"
-          dense>
+        <v-data-table
+          :headers="headers"
+          :items="clientes"
+          :loading="loading"
+          class="elevation-1"
+          mobile-breakpoint="500"
+          dense
+        >
           <template v-slot:item="{ item }">
             <tr>
               <td>{{ item.id }}</td>
@@ -34,28 +46,39 @@
               <td class="d-none d-md-table-cell">{{ item.cpfOuCnpj }}</td>
               <td class="d-none d-md-table-cell">{{ item.email }}</td>
               <td class="d-none d-md-table-cell">{{ item.telefone }}</td>
-              <td class="d-none d-md-table-cell">{{ item.dataCadastro | formatDate }}</td>
+              <td class="d-none d-md-table-cell">
+                {{ item.dataCadastro | formatDate }}
+              </td>
               <td>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on, attrs }">
-                <v-btn icon v-bind="attrs" v-on="on" @click="editarCliente(item)">
-                  <v-icon color='primary'>mdi-pencil-outline</v-icon>
-                </v-btn>
-          </template>
-          <span>Editar Cliente</span>
-          </v-tooltip>
+                    <v-btn
+                      icon
+                      v-bind="attrs"
+                      v-on="on"
+                      @click="editarCliente(item)"
+                    >
+                      <v-icon color="primary">mdi-pencil-outline</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Editar Cliente</span>
+                </v-tooltip>
 
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on, attrs }">
-                <v-btn icon v-bind="attrs" v-on="on" @click="openDeleteDialog(item)">
-                  <v-icon color='primary'>mdi-delete-outline</v-icon>
-                </v-btn>
-            </template>
-            <span>Excluir Cliente</span>
-          </v-tooltip>
-
-          </td>
-          </tr>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      icon
+                      v-bind="attrs"
+                      v-on="on"
+                      @click="openDeleteDialog(item)"
+                    >
+                      <v-icon color="primary">mdi-delete-outline</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Excluir Cliente</span>
+                </v-tooltip>
+              </td>
+            </tr>
           </template>
         </v-data-table>
         <!-- Diálogo de Confirmação de Exclusão -->
@@ -69,12 +92,18 @@
               </v-btn>
             </v-card-title>
             <v-card-text>
-              Você tem certeza que deseja excluir o cliente <strong>{{ selectedCliente?.nome }}</strong>?
+              Você tem certeza que deseja excluir o cliente
+              <strong>{{ selectedCliente?.nome }}</strong
+              >?
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn class='delete-button' text @click="deletarCliente">Excluir Cliente</v-btn>
-              <v-btn class='cancel-button' text @click="closeDeleteDialog">Cancelar</v-btn>
+              <v-btn class="delete-button" text @click="deletarCliente"
+                >Excluir Cliente</v-btn
+              >
+              <v-btn class="cancel-button" text @click="closeDeleteDialog"
+                >Cancelar</v-btn
+              >
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -84,12 +113,12 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
-import ClientManager from '@/views/ClientManager.vue';
+import { mapActions, mapState } from "vuex";
+import ClientManager from "@/views/ClientManager.vue";
 
 export default {
   components: {
-    ClientManager
+    ClientManager,
   },
   data() {
     return {
@@ -97,21 +126,21 @@ export default {
       selectedCliente: null,
       loading: false,
       headers: [
-        { text: 'ID', value: 'id' },
-        { text: 'Nome', value: 'nome' },
-        { text: 'CPF/CNPJ', value: 'cpfOuCnpj' },
-        { text: 'Email', value: 'email' },
-        { text: 'Telefone', value: 'telefone' },
-        { text: 'Data de Cadastro', value: 'dataCadastro', sortable: false },
-        { text: 'Ações', value: 'actions', sortable: false },
+        { text: "ID", value: "id" },
+        { text: "Nome", value: "nome" },
+        { text: "CPF/CNPJ", value: "cpfOuCnpj" },
+        { text: "Email", value: "email" },
+        { text: "Telefone", value: "telefone" },
+        { text: "Data de Cadastro", value: "dataCadastro", sortable: false },
+        { text: "Ações", value: "actions", sortable: false },
       ],
     };
   },
   computed: {
-    ...mapState(['clientes']),
+    ...mapState(["clientes"]),
   },
   methods: {
-    ...mapActions(['fetchClientes', 'deleteCliente']),
+    ...mapActions(["fetchClientes", "deleteCliente"]),
     openNewClientDialog() {
       this.$refs.clientManager.openDialog();
     },
@@ -136,25 +165,25 @@ export default {
           .then(() => {
             this.closeDeleteDialog();
           })
-          .catch(error => {
-            console.error('Erro ao excluir o cliente:', error);
+          .catch((error) => {
+            console.error("Erro ao excluir o cliente:", error);
             if (error.response && error.response.status === 401) {
-              this.$router.push('/login');
-              alert('Sessão expirada, por favor faça login novamente.');
+              this.$router.push("/login");
+              alert("Sessão expirada, por favor faça login novamente.");
             } else {
-              alert('Erro ao excluir o cliente. Por favor, tente novamente.');
+              alert("Erro ao excluir o cliente. Por favor, tente novamente.");
             }
           })
           .finally(() => {
             this.loading = false;
           });
       }
-    }
+    },
   },
   filters: {
     formatDate(value) {
       if (value) {
-        return new Intl.DateTimeFormat('pt-BR').format(new Date(value));
+        return new Intl.DateTimeFormat("pt-BR").format(new Date(value));
       }
     },
   },
@@ -213,5 +242,4 @@ export default {
   text-transform: none;
   font-weight: normal;
 }
-
 </style>

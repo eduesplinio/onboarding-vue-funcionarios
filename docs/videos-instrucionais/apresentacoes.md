@@ -11,9 +11,9 @@ description: >-
 
 **Descrição:** Simon Sinek explora o conceito do "Círculo Dourado" e explica por que algumas pessoas e organizações são mais inovadoras, influentes e lucrativas do que outras.
 
-**Link:** [Assista no YouTube](https://www.youtube.com/watch?v=u4ZoJKF\_VuA)
+**Link:** [Assista no YouTube](https://www.youtube.com/watch?v=u4ZoJKF_VuA)
 
-***
+---
 
 #### 2. **Brene Brown - O Poder da Vulnerabilidade**
 
@@ -21,15 +21,15 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=iCvmsMzlF7o)
 
-***
+---
 
 #### 3. **Amy Cuddy - Sua Linguagem Corporal Molda quem Você é**
 
 **Descrição:** Amy Cuddy explora como a linguagem corporal pode afetar não apenas a forma como os outros nos veem, mas também como nos vemos.
 
-**Link:** [Assista no YouTube](https://www.youtube.com/watch?v=Ks-\_Mh1QhMc)
+**Link:** [Assista no YouTube](https://www.youtube.com/watch?v=Ks-_Mh1QhMc)
 
-***
+---
 
 #### 4. **Dan Pink - O Surpreendente Segredo do Sucesso nos Discurso de Vendas**
 
@@ -37,15 +37,15 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=u6XAPnuFjJc)
 
-***
+---
 
 #### 5. **Shawn Achor - O Segredo da Felicidade**
 
 **Descrição:** Shawn Achor explora a conexão entre felicidade e sucesso, e como uma mentalidade positiva pode impactar nosso desempenho e bem-estar.
 
-**Link:** [Assista no YouTube](https://www.youtube.com/watch?v=GXy\_\_kBVq1M)
+**Link:** [Assista no YouTube](https://www.youtube.com/watch?v=GXy__kBVq1M)
 
-***
+---
 
 #### 6. **Elizabeth Gilbert - Nurturing Creativity**
 
@@ -53,7 +53,7 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=86x-u-tz0MA)
 
-***
+---
 
 #### 7. **Ken Robinson - Como as escolas matam a criatividade**
 
@@ -61,7 +61,7 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=iG9CE55wbtY)
 
-***
+---
 
 #### 8. **Jill Bolte Taylor - Um Derrame, Lado A e Lado B**
 
@@ -69,7 +69,7 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=UyyjU8fzEYU)
 
-***
+---
 
 #### 9. **Susan Cain - O Poder dos Quietos**
 
@@ -77,7 +77,7 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=c0KYU2j0TM4)
 
-***
+---
 
 #### 10. **Ricardo Semler - Como (não) ensinamos nossas crianças a trabalhar**
 
@@ -85,7 +85,7 @@ description: >-
 
 **Link:** [Assista no YouTube](https://www.youtube.com/watch?v=b1ZgHl6rCzk)
 
-***
+---
 
 {% hint style="info" %}
 Estes vídeos oferecem uma variedade de perspectivas e insights valiosos sobre diversos temas, ideais para inspirar e informar apresentações na Orange Dragon.
